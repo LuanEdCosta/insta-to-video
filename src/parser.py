@@ -1,14 +1,16 @@
 from argparse import ArgumentParser
 from args import AppArgs
+from constants import MAX_DURATION
+from utils import is_url
 
 
 class ArgParser:
     def __init__(self):
-        self.parser = self.__createParser()
+        self.parser = self.__create_parser()
         self.args = self.parser.parse_args(namespace=AppArgs())
-        self.__validateArguments(self.args)
+        self.__format_arguments()
 
-    def __createParser(self):
+    def __create_parser(self):
         parser = ArgumentParser(
             description="Use the fotos of an Instagram account to create a short video."
         )
@@ -49,5 +51,27 @@ class ArgParser:
 
         return parser
 
-    def __validateArguments(self, args: AppArgs):
-        print(args)
+    def __format_arguments(self):
+        if is_url(self.args.music):
+            if not "youtube.com" in self.args.music:
+                print("--music option is not a valid Youtube URL")
+                exit(1)
+        else:
+            self.args.music = "https://youtube.com/watch?v={0}".format(self.args.music)
+
+        if is_url(self.args.instagram):
+            if not "instagram.com" in self.args.instagram:
+                print("--instagram option is not a valid Instagram URL")
+                exit(1)
+        else:
+            self.args.instagram = "https://instagram.com/{0}".format(
+                self.args.instagram
+            )
+
+        if self.args.duration > MAX_DURATION:
+            print(
+                "--duration option is invalid. The max duration is: {0} seconds".format(
+                    MAX_DURATION
+                )
+            )
+            exit(1)
