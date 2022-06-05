@@ -1,6 +1,5 @@
 from argparse import ArgumentParser
-from args import AppArgs
-from constants import MAX_DURATION
+from args import MAX_DURATION, AppArgs
 from utils import is_url
 
 
@@ -60,13 +59,13 @@ class ArgParser:
             self.args.music = "https://youtube.com/watch?v={0}".format(self.args.music)
 
         if is_url(self.args.instagram):
-            if not "instagram.com" in self.args.instagram:
+            if "instagram.com" in self.args.instagram:
+                self.args.instagram = (
+                    self.args.instagram.removesuffix("/").split("/").pop()
+                )
+            else:
                 print("--instagram option is not a valid Instagram URL")
                 exit(1)
-        else:
-            self.args.instagram = "https://instagram.com/{0}".format(
-                self.args.instagram
-            )
 
         if self.args.duration > MAX_DURATION:
             print(

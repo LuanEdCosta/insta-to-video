@@ -1,1 +1,0 @@
-MAX_DURATION = 60 * 3

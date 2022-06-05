@@ -1,5 +1,6 @@
 from pytube import YouTube
 
+OUTPUT_DIR = "audios"
 
 class YoutubeDownloader:
     def __init__(self, video_url: str):
@@ -18,7 +19,7 @@ class YoutubeDownloader:
         first_stream = streams[0]
 
         path = first_stream.download(
-            output_path="audios", filename="{0}.mp4".format(yt.video_id)
+            output_path=OUTPUT_DIR, filename="{0}.mp4".format(yt.video_id)
         )
 
         return path

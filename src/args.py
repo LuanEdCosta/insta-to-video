@@ -1,5 +1,7 @@
 from argparse import Namespace
 
+MAX_DURATION = 60 * 3
+
 
 class AppArgs(Namespace):
     def __init__(self):
