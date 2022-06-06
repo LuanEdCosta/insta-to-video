@@ -3,8 +3,10 @@
     "instagram",
     "instagrapi",
     "kwai",
+    "moviepy",
     "pytube",
     "removesuffix",
+    "write_videofile",
     "youtube"
   ]
 }

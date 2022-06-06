@@ -1,5 +1,5 @@
-from os import makedirs, path
 from time import time
+from os import makedirs, path
 from instagrapi import Client
 
 OUTPUT_DIR = "images"
@@ -11,7 +11,7 @@ class InstagramDownloader:
         self.number_of_photos = number_of_photos
         self.downloaded_images_count = 0
         self.user_id = 0
-        self.user_output_dir = "{0}/{1}_{2}".format(OUTPUT_DIR, user_name, int(time()))
+        self.user_output_dir = path.abspath("{0}/{1}_{2}".format(OUTPUT_DIR, user_name, int(time())))
         self.create_output_folder()
         self.download_images()
 
@@ -26,7 +26,7 @@ class InstagramDownloader:
         end_cursor = None
         while self.downloaded_images_count < self.number_of_photos:
             medias, end_cursor = client.user_medias_paginated(
-                self.user_id, 10, end_cursor
+                self.user_id, self.number_of_photos, end_cursor
             )
 
             for media in medias:
