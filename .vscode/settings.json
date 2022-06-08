@@ -1,11 +1,13 @@
 {
   "cSpell.words": [
+    "dotenv",
     "instagram",
     "instagrapi",
     "kwai",
     "moviepy",
     "pytube",
     "removesuffix",
+    "S_IWRITE",
     "write_videofile",
     "youtube"
   ]
