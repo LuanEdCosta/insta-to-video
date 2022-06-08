@@ -38,6 +38,6 @@ class InstagramDownloader:
             )
 
             for media in medias:
-                if media.media_type == 1:
-                    image_path = client.photo_download(media.pk, self.user_output_dir)
+                if self.downloaded_images_count < self.number_of_photos and media.media_type == 1:
+                    client.photo_download(media.pk, self.user_output_dir)
                     self.downloaded_images_count += 1
