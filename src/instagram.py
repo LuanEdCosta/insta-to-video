@@ -23,7 +23,7 @@ class InstagramDownloader:
 
     def download_images(self):
         client = Client()
-        
+
         load_dotenv()
         INSTAGRAM_USERNAME = getenv("INSTAGRAM_USERNAME")
         INSTAGRAM_PASSWORD = getenv("INSTAGRAM_PASSWORD")

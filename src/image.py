@@ -19,7 +19,7 @@ class ImageProcessor:
             height_list.append(image.height)
             if not self.smallest_image or image.width < self.smallest_image[0] or image.height < self.smallest_image[1]:
                 self.smallest_image = (image.width, image.height)
-        
+
         if len(list(dict.fromkeys(width_list))) == 1 and len(list(dict.fromkeys(height_list))) == 1:
             self.need_to_resize = False
 

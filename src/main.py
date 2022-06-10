@@ -6,11 +6,11 @@ from instagram import InstagramDownloader
 
 if __name__ == "__main__":
     arg_parser = ArgParser()
-    
+
     youtube_downloader = YoutubeDownloader(
         video_url=arg_parser.args.music
     )
-    
+
     instagram_downloader = InstagramDownloader(
         user_name=arg_parser.args.instagram,
         number_of_photos=arg_parser.args.number_of_photos

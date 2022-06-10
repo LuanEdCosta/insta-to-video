@@ -28,6 +28,6 @@ class VideoMaker:
 
         video_clip = ImageSequenceClip(self.images_path, fps=fps)
         video_clip.audio = audio_clip
-        
+
         video_file_path = "{0}/{1}_{2}.mp4".format(OUTPUT_DIR, self.user_name, int(time()))
         video_clip.write_videofile(video_file_path)
