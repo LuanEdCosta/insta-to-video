@@ -28,12 +28,12 @@ python src/main.py -m youtube_video_id -i instagram_username -d duration_in_seco
 
 **Options**
 
-|         Option         |  Type  |      Required      |         Description          |
-| :--------------------: | :----: | :----------------: | :--------------------------: |
-|      -m, --music       | string | :heavy_check_mark: |   Youtube video ID or URL    |
-|    -i, --instagram     | string | :heavy_check_mark: | Instagram username. Ex: nasa |
-|     -d, --duration     | number |        :x:         |             :x:              |
-| -n, --number_of_photos | number |        :x:         |             :x:              |
+|         Option         |  Type   |      Required      |           Description            |
+| :--------------------: | :-----: | :----------------: | :------------------------------: |
+|      -m, --music       | string  | :heavy_check_mark: |     Youtube video ID or URL      |
+|    -i, --instagram     | string  | :heavy_check_mark: |   Instagram username. Ex: nasa   |
+|     -d, --duration     |  float  |        :x:         | Duration of the video in seconds |
+| -n, --number_of_photos | integer |        :x:         |         Number of photos         |
 
 ## :file_folder: Examples
 
