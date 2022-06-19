@@ -20,8 +20,6 @@ OR
 
 ## :page_with_curl: Usage
 
-Example:
-
 ```shell
 python src/main.py -m youtube_video_id -i instagram_username -d duration_in_seconds -n number_of_photos
 ```
