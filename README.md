@@ -37,6 +37,10 @@ python src/main.py -m youtube_video_id -i instagram_username -d duration_in_seco
 
 Check out the [examples folder](/examples) to see videos created using this library.
 
+## :handshake: Contribution
+
+Every contribution is appreciated :heart:. Check out the issues tab to see how to contribute.
+
 ## :man: Author
 
 Luan Eduardo da Costa | [Follow me on Linkedin](https://www.linkedin.com/in/luaneducosta/)
