@@ -39,7 +39,7 @@ Check out the [examples folder](/examples) to see videos created using this libr
 
 ## :handshake: Contribution
 
-Every contribution is appreciated :heart:. Check out the issues tab to see how to contribute.
+Every contribution is appreciated :heart:. Check out the [issues](https://github.com/LuanEdCosta/insta-to-video/issues) tab to see how to contribute.
 
 ## :man: Author
 
