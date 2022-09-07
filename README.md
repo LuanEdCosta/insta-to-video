@@ -1,4 +1,4 @@
-# :film_strip: Insta To Video
+# :film_strip: Instagram To Video
 
 Use photos of an Instagram account to create a short video.
 
